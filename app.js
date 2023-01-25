@@ -5,4 +5,4 @@ const heading_2 = React.createElement('h3',{},'This is heading3 from react');
 const container = React.createElement('div',{'id':'container'},[heading_1,heading_2])
 //passing react element inside the root1
 root1.render(container); // render replaces or overrides the content inside the root id. or modifies DOM
-//createElement is not user friendly hence this lead to the usage of JSX
+//createElement is not user friendly hence this lead to the usage ofJSX
