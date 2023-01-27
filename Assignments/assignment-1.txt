@@ -1,0 +1,106 @@
+(1)What is emmet?
+Emmet is a plug in for text editors that uses snippets and abbreviations + tab key to save a lot of time for 
+developers to generate boiler plate code templates for HTML and CSS.
+Some commonly used abbreviations by emmet are:
+    (1) Press ! to get boiler plate html templates
+    (2) h1+tab gives header div+tab gives div tag 
+    (3) ul>li*5 gives unorderd list with 5 items in it.
+    (4) For CSS , m10+Tab gives margin shorthand property with a 10px value
+              p10+Tab gives padding shorthand property with a 10px value
+              w100+Tab gives width property with a value of 100%
+              h50+Tab gives height property with a value of 50px
+
+(2)What is the difference between a library and a framework?
+A library is a collection of pre-written code that provides a set of functions or classes that can be used by a 
+program to perform specific tasks.
+A library is essentially a tool that a developer can use to add functionality to their program without having to 
+write the code themselves. 
+For example, a library for image manipulation might provide functions for cropping, resizing, and editing images.
+
+A framework, on the other hand, is a set of pre-written code that provides a structure for building a specific type
+ of application. A framework 
+defines a set of conventions for building and organizing an application, and provides a set of tools for common tasks.
+ Unlike a library, a framework 
+is not just a collection of functions, but a whole architecture and way of developing an application. Frameworks are 
+more opinionated, meaning that 
+it gives you a particular way of doing things.
+
+In simple terms, a library is a set of tools, a framework is a way of using those tools. When you use a library, you 
+call its functions and classes 
+directly to perform specific tasks, while in a framework, you build your application by following its conventions and using its provided tools.
+
+For example, React.js is a JavaScript library for building user interfaces and Angular.js is a JavaScript framework for 
+building web applications.
+
+(3)What is CDN? Why do we use it?
+CDN stands for Content Delivery Network. It is a network of servers distributed across multiple locations around the world,
+designed to deliver content to users based on their geographical location.
+When a user requests a web page, the request is directed to the server closest to the user, which then serves the content.
+This reduces the distance that data has to travel and improves the load time of the website.
+CDNs are used for a variety of purposes, including:
+Speed: By delivering content from the server closest to the user, CDNs can significantly reduce the load time of a website.
+Scalability: CDNs can handle large amounts of traffic and can automatically scale to meet demand.
+Security: CDNs can provide additional security features such as DDoS protection and SSL encryption.
+Redundancy: CDNs can ensure that content is delivered even if one or more servers go down.
+CDNs are often used to deliver static content such as images, videos, and JavaScript and CSS files, but can also be used 
+to deliver dynamic content such as API responses.
+Overall, a CDN allows you to distribute your content over a large number of servers in various locations, which can help 
+you improve your site's loading speed, scalability, security, and availability.
+
+(4)Why is React known as React?
+React is known as React because it was designed to help developers "react" to changes in their user interfaces. React is a 
+JavaScript library for building user interfaces, and it was created by Facebook to address some of the challenges they were 
+facing with building complex, dynamic user interfaces.
+In traditional web development, when the data behind a user interface changes, the whole page needs to be re-rendered. This 
+can lead to slow performance and a poor user experience. React solves this problem by introducing a concept called the 
+virtual DOM. 
+The virtual DOM is a JavaScript representation of the actual DOM, and it allows React to update only the specific parts of 
+the user 
+interface that have changed, rather than re-rendering the entire page.
+This efficient and effective way of updating the user interface in response to changes in the data is the reason behind the name 
+React. It also reflects the idea that React is a library which allows you to respond to changes in a more efficient way.
+
+(5)What is crossorigin in script tag?
+The crossorigin attribute in a script tag is used to indicate that the script file should be loaded using CORS 
+(Cross-Origin Resource Sharing). CORS is a security feature that is built into web browsers that prevents a web page from making 
+requests to a different domain than the one that served the web page.
+When a web page makes a request for a script file, the browser will check the Access-Control-Allow-Origin header on the response to 
+determine whether the script file can be loaded. If the header is not present or does not include the origin of the web page, the 
+browser will prevent the script from being loaded.
+When you set the crossorigin attribute on a script tag to "anonymous", it tells the browser to make a CORS request with an Origin 
+header. But this request will not include any user credentials, such as cookies or HTTP authentication.
+When you set the crossorigin attribute on a script tag to "use-credentials", it tells the browser to make a CORS request with an 
+Origin header and include user credentials.
+By setting the crossorigin attribute on the script tag, you are indicating that the script should be loaded using CORS, and you 
+can specify whether or not to include user credentials in the request.
+You may use crossorigin attribute if you are loading a script from a different domain or if you are using a Content Delivery 
+Network (CDN) to serve your script.
+
+
+(6)What is the difference between React and React DOM?
+React and React DOM are two separate libraries that are developed and maintained by Facebook. While they are closely related, 
+they have distinct purposes.
+React is a JavaScript library for building user interfaces. It provides a set of tools for creating reusable, composable components, 
+and managing the state and behavior of those components. It also introduces the concept of a virtual DOM, which allows React to 
+efficiently update the user interface in response to changes in the data.
+React DOM, on the other hand, is a separate library that is used to interact with the actual DOM (Document Object Model) of a web page. 
+It provides a set of methods that can be used to render React components to the DOM, and manage updates to the DOM as the state of the 
+components change.
+In summary, React is a library for building user interfaces, it is the "View" in the MVC pattern, it provides the tools to create and 
+manage the components, and React DOM is a library that connects React with the actual DOM, it provides the tools to render React components 
+to the web page, and manage updates to the DOM as the state of the components change.
+It is important to note that React can also be used in other environments, such as React Native for mobile apps, React VR for virtual reality, 
+and React 360 for 3D applications, React DOM is only used when developing web apps.
+
+
+(7)What is async and defer??
+async and defer are two attributes that can be used on the script tag when loading JavaScript files. They are used to specify how a browser 
+should handle the execution of the script.
+async attribute tells the browser to download and execute the script as soon as it is available, without blocking the browser from continuing 
+to parse and render the rest of the web page. This means that the script will be executed as soon as it is downloaded, regardless of the order 
+in which it appears in the HTML code. It's good to use async when the script does not depend on any other script or the content of the page.
+defer attribute tells the browser to download the script and wait until the web page has finished parsing before executing it. This means that 
+the script will be executed in the order in which it appears in the HTML code. This is useful when the script depends on other scripts or the 
+content of the page.
+In summary, async attribute allows the browser to continue parsing the HTML while downloading the script and execute the script as soon as 
+it is available. defer attribute tells the browser to wait until the parsing of the HTML is finished before executing the script.
